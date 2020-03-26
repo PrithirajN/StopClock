@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+ <html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <title>ClockWorks</title> 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>ClockWorks</h1>
+
+        <section id="controls">
+
+            <div class="input-groups">
+                <label for="minutes-input">Minutes</label>
+                <input type="number" placeholder="0" id="minutes-input"
+                max="300" min="0">
+            </div>
+
+            <div class="input-groups">
+                <label for="seconds-input">Seconds</label>
+                <input type="number" placeholder="0" id="seconds-input"
+                max="59" min="0" step="5">
+            </div>
+
+            <button type="button" id="start-button" onclick="startTimer();">Start</button>
+            <button type="button" id="pause-button" onclick="pauseTimer();" disabled>Pause</button>
+            <button type="button" id="reset-button" onclick="resetTimer();" disabled>Reset</button>
+        </section>
+        <h2><span id="minutes">0</span>:<span id="seconds">00</span></h2>
+
+
+        
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
