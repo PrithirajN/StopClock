@@ -6,7 +6,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body onload="playbeep()">
 
         <h1>StopClocks</h1>
 
@@ -24,11 +24,20 @@
                 max="59" min="0" step="5">
             </div>
 
-            <button type="button" id="start-button" onclick="startTimer();">Start</button>
-            <button type="button" id="pause-button" onclick="pauseTimer();" disabled>Pause</button>
-            <button type="button" id="reset-button" onclick="resetTimer();" disabled>Reset</button>
+            <button type="button" href="#" id="start-button" onclick="startTimer()" onmouseenter="playstart()">Start</button>
+            <button type="button" href="#" id="pause-button" onclick="pauseTimer();" onmouseenter="playpause()" disabled>Pause</button>
+            <button type="button" href="#" id="reset-button" onclick="resetTimer();" onmouseenter="playreset()" disabled>Reset</button>
         </section>
         <h2><span id="minutes">0</span>:<span id="seconds">00</span></h2>
+        <audio id="audioID1" autoplay="autoplay" preload="auto">
+            <source src="start.m4a">
+        </audio>
+        <audio id="audioID2">
+            <source src="pause.m4a">
+        </audio>
+        <audio id="audioID3">
+            <source src="reset.m4a">
+        </audio>
 
 
         

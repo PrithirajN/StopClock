@@ -35,5 +35,6 @@
         "statusBarItem.hoverBackground": "#90746a",
         "statusBar.foreground": "#e7e7e7"
     },
-    "peacock.color": "#735c54"
+    "peacock.color": "#735c54",
+    "git.ignoreLimitWarning": true
 }

@@ -110,3 +110,22 @@ function unfreezeInputs() {
     $("#minutes-input").removeAttr("disabled")
     $("#seconds-input").removeAttr("disabled")
 }
+
+var audio1 = document.getElementById("audioID1")
+var audio2 = document.getElementById("audioID2")
+var audio3 = document.getElementById("audioID3")
+
+function playstart()
+{
+    audio1.play();
+}
+
+function playpause()
+{
+    audio2.play();
+}
+
+function playreset()
+{
+    audio3.play();
+}
