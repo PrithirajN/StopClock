@@ -1,4 +1,4 @@
 # StopClock
 A StopWatch.
 This is my first project on web.
-This was done after learning from an Udemy course.
+To make it useable for blind people I have added sound.
