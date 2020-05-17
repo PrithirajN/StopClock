@@ -175,9 +175,10 @@ h2 {
     }
     h2{
         text-align: center;
-        padding-left: 200px;
+        padding-left: 28vw;
     }
     h1{
+        padding-left: 150px;
         font-size: 80px;
         text-align: center;
     }
@@ -205,7 +206,7 @@ h2 {
         outline: none;
     }
     button {
-        padding: 12px 62px;
+        padding: 12px 82px;
         margin: 10px;
     }
     
