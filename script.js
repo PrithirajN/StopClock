@@ -114,6 +114,8 @@ function unfreezeInputs() {
 var audio1 = document.getElementById("audioID1")
 var audio2 = document.getElementById("audioID2")
 var audio3 = document.getElementById("audioID3")
+var audio4 = document.getElementById("audioID4")
+var audio5 = document.getElementById("audioID5")
 
 function playstart()
 {
@@ -128,4 +130,14 @@ function playpause()
 function playreset()
 {
     audio3.play();
+}
+
+function entermint()
+{
+    audio4.play();
+}
+
+function entersec()
+{
+    audio5.play();
 }

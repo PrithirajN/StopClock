@@ -14,13 +14,13 @@
 
             <div class="input-groups">
                 <label for="minutes-input">Minutes</label>
-                <input type="number" placeholder="0" id="minutes-input"
+                <input type="number" placeholder="0" id="minutes-input" onmouseenter="entermint()"
                 max="300" min="0">
             </div>
 
             <div class="input-groups">
                 <label for="seconds-input">Seconds</label>
-                <input type="number" placeholder="0" id="seconds-input"
+                <input type="number" placeholder="0" id="seconds-input" onmouseenter="entersec()"
                 max="59" min="0" step="5">
             </div>
 
@@ -29,7 +29,7 @@
             <button type="button" href="#" id="reset-button" onclick="resetTimer();" onmouseenter="playreset()" disabled>Reset</button>
         </section>
         <h2><span id="minutes">0</span>:<span id="seconds">00</span></h2>
-        <audio id="audioID1" autoplay="autoplay" preload="auto">
+        <audio id="audioID1">
             <source src="start.mp3">
         </audio>
         <audio id="audioID2">
@@ -37,6 +37,12 @@
         </audio>
         <audio id="audioID3">
             <source src="reset.mp3">
+        </audio>
+        <audio id="audioID4">
+            <source src="entermint.mp3">
+        </audio>
+        <audio id="audioID5">
+            <source src="entersec.mp3">
         </audio>
 
 
