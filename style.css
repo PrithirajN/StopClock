@@ -212,9 +212,10 @@ h2 {
     }
     button {
       
-        padding: 12px 82px;
+        padding: 12px 72px;
         margin: 10px;
-        margin-right: 30px;
+        margin-right: 20px;
+        font-size: 35px;
     }
     
 }
