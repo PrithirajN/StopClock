@@ -4,25 +4,73 @@ body, button, input {
 }
 
 body {
-    margin: 72px 140px 0;
+    /* margin: 72px 140px 0; << defaults*/ 
+    width: 100%; /*? me*/
+    margin: auto; /*? me*/
 }
 
-h1 {
-    font-weight: 800;
-    font-size: 74px;
+/*! my contribution*/
+.container{
+    width: 100%;
+    min-height: 100vh;
+}
+header{
+    background: #191822;
+}
+.header{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0 1em 0;
 }
 
-#controls {
-    display: inline-block;
-    width: 46%;
-    border-right: 1px solid rgba(0, 0, 0, .5);
-    padding-bottom: 42px;
-    padding-right: 42px;
+.header h1{
+    /** using clamp function, allow you to make your text/title  responsive */
+    font-size: clamp(1.2rem, 6.5vw, 3.5rem);
+    text-transform: uppercase;
+}
+/*? me*/
+
+.content_container{
+    width: 100%;
 }
 
 
-.input-group {
-    margin: 26px 0;
+#minutes-input, #seconds-input{
+    width: 30%;
+    margin-left: 2em;
+}
+
+.btn__Container{    
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.btn__Container button{
+    width: 20%;
+    padding: 0.3em 0;
+    border-radius: 5px ;
+    border: none;
+    cursor: pointer;
+    font-size: clamp(1rem, 2.2vw, 1.8rem);
+}
+button:nth-child(1){
+    background: #151515;
+    color: #fff;
+}
+button:nth-child(2){
+    background: #daba3a;
+}
+button:nth-child(3){
+    background: #f25e5e;
+}
+.container__clock{
+    width: 99%;
+    margin: auto 0;
+    min-height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 label {
@@ -32,7 +80,6 @@ label {
     font-size: 30px;
     padding: 12px;
 }
-
 input {
     width: 60%;
     font-size: 30px;
@@ -42,20 +89,20 @@ input {
     font-weight: 200;
     outline: none;
 }
-
 input:disabled {
     background-color: white;
     opacity: .6;
 }
 
-button {
+/** Default*/
+/* button {
     padding: 12px 62px;
     background-color: #222;
     color: white;
     border: none;
     outline: none;
     font-size: 20px;
-}
+} */
 
 button:hover {
     opacity: .9;
@@ -66,15 +113,56 @@ button:disabled {
 }
 
 h2 {
-    display: inline-block;
-    vertical-align: top;
-    font-weight: 200;
-    font-size: 144px;
-    margin: 12px 0;
-    padding-left: 100px;
+    background: white;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 0 0.5em rgba(53, 53, 53, 0.3);
+    font-weight: 500;
+    border-radius: 5em;
+    /** font-size: 144px; >> Avoid using pixel on the font better use rem */
+    font-size: clamp(1.3rem, 6.6vw, 5.5rem); /*? me*/
+    /** margin: 12px 0; padding-left: 100px; */
+    padding:0.4em 1.5em;
 }
 
 
+@media (min-width: 700px){
+    .content_container{
+        display: flex;
+    }
+    .input__Container{
+        flex-grow: 1; /*this is to tell the other container to take the remaining
+        available space*/
+    }
+    .container__clock{
+        width: 45%;
+    }
+
+    #controls {
+    /** display: inline-block; >> Defaults*/
+    /** width: 46%; >> Defaults*/
+    border-right: 1px solid #00000080;
+    padding: 2em;
+}
+}
+
+
+
+
+
+ 
+/*!Avoid building desktop fisrt, start with mobile then Desktop that way it's easy.
+/*! normaly when you design Desktop first you will realised that you have to 
+/*!reapet  your self when you are try to make it responsive.
+
+/*? Thank you for letting me contributing to your project i hope next time you want 
+/*? hesitate if you have any another project.
+
+
+
+
+
+/* 
 @media(max-width: 1300px) {
     
     label {
@@ -139,12 +227,12 @@ h2 {
 }
 
 @media(max-width: 1070px) {
-
+/* 
     h1{
         font-size: 70px;
     }
-    
-    label {
+     */
+    /* label {
         display: inline-block;
         width: 30%;
         font-weight: 200;
@@ -167,28 +255,28 @@ h2 {
     }
     
     
-}
+} */
 
-@media(max-width: 1000px) {
-    body{
+/* @media(max-width: 1000px) {
+    /* body{
         width: 70%;
         margin: 40px;
         padding: 20px;
-    }
-    h2{
+    } */
+    /* h2{
         position: absolute;
         top: 200px;
         margin-top: 60px;
         text-align: center;
         padding-left: 35vw;
-    }
-    h1{
+    } */ */
+    /* h1{
         padding-left: 20vw;
         padding-bottom: 100px;
         font-size: 80px;
         text-align: center;
-    }
-    label {
+    } */
+    /* label {
         display: inline-block;
         width: 30%;
         font-weight: 200;
@@ -219,15 +307,15 @@ h2 {
         font-size: 35px;
     }
     
-}
-
+} */
+/*
 @media(max-width: 800px) {
 
-    h1{
+    /* h1{
         font-size: 70px;
         padding-left: 10vw;
-    }
-    
+    } */
+ /*   
     h2{
         text-align: center;
         padding-left: 27vw;
@@ -254,5 +342,5 @@ h2 {
         font-weight: 200;
         outline: none;
     }
-        
-}
+}**/
+    
